@@ -1,11 +1,18 @@
 import React from "react"
-import Navbar from "./components/Navbar"
+
+import Admin from "./Admin"
+
+import { Provider } from "react-redux"
+import generateStore from "./redux/store"
 
 function App() {
+  const store = generateStore()
   return (
-    <>
-      <Navbar />
-    </>
+    <Provider store={store}>
+      {/* <Navbar />
+      <Registro /> */}
+      <Admin />
+    </Provider>
   )
 }
 

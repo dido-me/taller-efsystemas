@@ -32,7 +32,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: "./src/index.html",
+      favicon: "./src/favicon.ico",
     }),
     new MiniCssExtractPlugin(),
     new DotenvWebpackPlugin({
@@ -42,5 +43,8 @@ module.exports = {
   ],
   resolve: {
     extensions: [".js", ".jsx", ".json"],
+  },
+  performance: {
+    hints: false,
   },
 }
